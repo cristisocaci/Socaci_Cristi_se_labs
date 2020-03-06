@@ -1,4 +1,4 @@
-package Socaci.Cristi.lab2.ex2;
+package edu.tucn.lab2.ex2;
 
 import java.util.Scanner;
 

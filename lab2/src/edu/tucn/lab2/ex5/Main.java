@@ -1,4 +1,4 @@
-package Socaci.Cristi.lab2.ex5;
+package edu.tucn.lab2.ex5;
 
 public class Main {
     public static void bubbleSort(int[] v)

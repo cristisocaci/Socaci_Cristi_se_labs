@@ -1,4 +1,4 @@
-package Socaci.Cristi.lab2.ex4;
+package edu.tucn.lab2.ex4;
 
 public class Main {
     public static int maxInVector(int[] v)
