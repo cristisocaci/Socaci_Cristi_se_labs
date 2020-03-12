@@ -1,6 +1,6 @@
 package edu.tucn.lab3.ex2;
 
-import javax.swing.*;
+import java.util.Random;
 
 class Circle
 {
@@ -30,15 +30,21 @@ class Circle
 class TestCircle
 {
     private Circle c;
-    public TestCircle(Circle c)
+    public void test()
     {
-        this.c = c;
+        Random rand = new Random();
+        for(int i = 0; i < 10; ++i)
+        {
+            this.c = new Circle(rand.nextDouble());
+            System.out.println(this.c.getRadius() + " " + this.c.getArea());
+        }
     }
-    
+
 }
 public class Main
 {
     public static void main(String[] args) {
-
+        TestCircle t = new TestCircle();
+        t.test();
     }
 }
