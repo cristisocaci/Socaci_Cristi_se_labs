@@ -1,23 +1,23 @@
-package edu.tucn.lab4.ex3;
+package edu.tucn.lab4.ex3and4;
 
 import edu.tucn.lab4.ex2.Author;
 
 public class Book
 {
     private String name;
-    private Author author;
+    private Author[] authors;
     private double price;
     private int qtyInStock = 0;
 
-    public Book(String name, Author author, double price) {
+    public Book(String name, Author[] author, double price) {
         this.name = name;
-        this.author = author;
+        this.authors = author;
         this.price = price;
     }
 
-    public Book(String name, Author author, double price, int qtyInStock) {
+    public Book(String name, Author[] author, double price, int qtyInStock) {
         this.name = name;
-        this.author = author;
+        this.authors = author;
         this.price = price;
         this.qtyInStock = qtyInStock;
     }
@@ -26,8 +26,8 @@ public class Book
         return name;
     }
 
-    public Author getAuthor() {
-        return author;
+    public Author[] getAuthors() {
+        return authors;
     }
 
     public double getPrice() {
@@ -48,6 +48,16 @@ public class Book
 
     @Override
     public String toString() {
-        return "" + this.name + " by " + author.toString();
+        int i = 0 ;
+        for(Author a: authors)
+            i += 1;
+
+        return "" + this.name + " by " + i + " authors";
+    }
+
+    public void printAuthors()
+    {
+        for (Author i:authors)
+            System.out.println(i.toString());
     }
 }
