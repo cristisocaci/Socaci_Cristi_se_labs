@@ -6,36 +6,30 @@ public class Author
     private String email;
     private char gender;
 
-    public Author(String name, String email, char gender)
-    {
+    public Author(String name, String email, char gender) {
         this.name = name;
         this.email = email;
         this.gender = gender;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public String getEmail()
-    {
+    public String getEmail() {
         return email;
     }
 
-    public char getGender()
-    {
+    public char getGender() {
         return gender;
     }
 
-    public void setEmail(String email)
-    {
+    public void setEmail(String email) {
         this.email = email;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "" + this.name + " (" + this.gender + ") at " + this.email;
     }
 }
