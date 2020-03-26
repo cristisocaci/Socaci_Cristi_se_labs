@@ -1,5 +1,7 @@
 package edu.tucn.lesson4.homework;
 
+import javax.swing.*;
+
 /**
  * @author Radu Miron
  * @version 1
@@ -7,13 +9,8 @@ package edu.tucn.lesson4.homework;
  */
 public class Main {
     public static void main(String[] args) {
-        // todo create menu in command line or with GUI (even better)
-        PersonRepository personRepository = new PersonRepository();
-
-        PersonEntity personEntity1 = new PersonEntity("123", "Ioan", "Popescu");
-        PersonEntity personEntity2 = new PersonEntity("222", "Ioana", "Popescu");
-
-        personRepository.create(personEntity1);
-        personRepository.create(personEntity2);
+        PersonRepository repo = new PersonRepository();
+        Menu m = new Menu("Menu", repo);
+        m.mainWindow();
     }
 }

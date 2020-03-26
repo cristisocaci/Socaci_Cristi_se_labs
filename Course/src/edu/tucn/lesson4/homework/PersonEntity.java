@@ -9,6 +9,9 @@ public class PersonEntity {
     private String firstName;
     private String lastName;
 
+    public PersonEntity() {
+    }
+
     public PersonEntity(String idNumber, String firstName, String lastName) {
         this.idNumber = idNumber;
         this.firstName = firstName;
@@ -41,10 +44,8 @@ public class PersonEntity {
 
     @Override
     public String toString() {
-        return "PersonEntity{" +
-                "idNumber='" + idNumber + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+        return "idNumber= '" + idNumber + "'\n" +
+                "firstName= '" + firstName + "'\n"  +
+                "lastName= '" + lastName + "'\n" ;
     }
 }

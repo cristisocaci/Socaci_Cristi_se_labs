@@ -1,1 +1,4 @@
-PersonEntity{idNumber='123', firstName='Ioan', lastName='Popescu'}
+idNumber= '123'
+firstName= 'Cristi'
+lastName= 'Socaci'
+
