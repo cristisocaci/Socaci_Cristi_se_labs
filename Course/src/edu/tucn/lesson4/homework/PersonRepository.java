@@ -11,10 +11,11 @@ import java.util.LinkedList;
 public class PersonRepository {
 
     private LinkedList<PersonEntity> fullNames = new LinkedList<PersonEntity>();
+    private String path = "Persons";
 
     public PersonRepository() {
 
-        File dir = new File("src\\edu\\tucn\\lesson4\\homework\\Persons");
+        File dir = new File(path);
         File[] files = dir.listFiles();
         if(files != null)
             for (File f : files)
@@ -26,7 +27,7 @@ public class PersonRepository {
     }
 
     public void create(PersonEntity personEntity) {
-        File dir = new File("src\\edu\\tucn\\lesson4\\homework\\Persons");
+        File dir = new File(path);
         File[] files = dir.listFiles();
         if(files != null)
             for (File f : files)
@@ -34,7 +35,7 @@ public class PersonRepository {
                     System.out.println("Person with the same id already exists");
                     return;
                 }
-        try (FileWriter fileWriter = new FileWriter("src\\edu\\tucn\\lesson4\\homework\\Persons\\"
+        try (FileWriter fileWriter = new FileWriter(path + "\\"
                 + personEntity.getIdNumber() + ".txt")) {
             fileWriter.write(personEntity.toString() + "\n");
             fileWriter.flush();
@@ -53,7 +54,7 @@ public class PersonRepository {
     public PersonEntity read(String idNumber) {
         try {
             PersonEntity p = new PersonEntity();
-            BufferedReader reader = new BufferedReader(new FileReader("src\\edu\\tucn\\lesson4\\homework\\Persons\\" + idNumber));
+            BufferedReader reader = new BufferedReader(new FileReader(path + "\\" + idNumber));
             p.setIdNumber(reader.readLine().split("'")[1]);
             p.setFirstName(reader.readLine().split("'")[1]);
             p.setLastName(reader.readLine().split("'")[1]);
@@ -65,7 +66,7 @@ public class PersonRepository {
     }
 
     public void update(PersonEntity newP, PersonEntity old) {
-        File f = new File("src\\edu\\tucn\\lesson4\\homework\\Persons\\" + old.getIdNumber() + ".txt");
+        File f = new File(path + "\\" + old.getIdNumber() + ".txt");
         if(f.delete())
             System.out.println("File Deleted successfully");
         else
@@ -78,7 +79,7 @@ public class PersonRepository {
     }
 
     public boolean delete(PersonEntity p) {
-        File file = new File("src\\edu\\tucn\\lesson4\\homework\\Persons\\" + p.getIdNumber() + ".txt");
+        File file = new File(path + "\\" + p.getIdNumber() + ".txt");
         if (file.delete()) {
             System.out.println("File deleted successfully");
             fullNames.remove(p);
