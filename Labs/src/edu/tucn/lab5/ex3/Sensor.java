@@ -11,20 +11,6 @@ abstract class Sensor {
     }
 }
 
-class LightSensor extends Sensor {
-    @Override
-    public int readValue() {
-        return new Random().nextInt(100);
-    }
-}
-
-class TemperatureSensor extends Sensor{
-    @Override
-    public int readValue() {
-        return new Random().nextInt(100);
-    }
-}
-
 class Controller{
     private LightSensor ls;
     private TemperatureSensor ts;
