@@ -41,4 +41,19 @@ public class BankAccount {
             balance += amount;
     }
 
+    public String getOwner() {
+        return owner;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "owner='" + owner + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }
