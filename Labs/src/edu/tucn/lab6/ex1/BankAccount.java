@@ -1,8 +1,9 @@
 package edu.tucn.lab6.ex1;
 
 import java.util.Objects;
+import java.lang.Comparable;
 
-public class BankAccount {
+public class BankAccount implements Comparable<BankAccount>{
     private String owner;
     private double  balance;
 
@@ -55,5 +56,10 @@ public class BankAccount {
                 "owner='" + owner + '\'' +
                 ", balance=" + balance +
                 '}';
+    }
+
+    @Override
+    public int compareTo(BankAccount o) {
+        return Double.compare(this.getBalance(), o.getBalance());
     }
 }
