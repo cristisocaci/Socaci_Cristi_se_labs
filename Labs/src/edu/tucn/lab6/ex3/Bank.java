@@ -9,6 +9,10 @@ import java.util.stream.Collectors;
 public class Bank {
     private TreeSet<BankAccount> accounts = new TreeSet<BankAccount>();
 
+    public Bank() {
+        System.out.println("TreeSet");
+    }
+
     public void addAccount(String owner, double balance){
         accounts.add(new BankAccount(owner, balance));
     }
