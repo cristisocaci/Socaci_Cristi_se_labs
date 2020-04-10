@@ -1,10 +1,12 @@
 package edu.tucn.lab7.ex4;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.Objects;
 
 public class Car implements Serializable {
-    String model;
-    int price;
+    private String model;
+    private int price;
 
     public Car(String model, int price) {
         this.model = model;
@@ -19,14 +21,12 @@ public class Car implements Serializable {
             fileout.close();
             System.out.println("Car saved successfully");
         } catch (IOException e) {
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
         }
     }
     public static void displayAllCars(){
         File dir = new File("src\\edu\\tucn\\lab7\\ex4\\Cars");
-        for(File f: dir.listFiles()){
-            System.out.println(f.getName());
-        }
+        Arrays.stream(Objects.requireNonNull(dir.listFiles())).map(File::getName).forEach(System.out::println);
 
     }
 
