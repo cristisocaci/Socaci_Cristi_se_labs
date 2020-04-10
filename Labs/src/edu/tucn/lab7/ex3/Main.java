@@ -1,6 +1,5 @@
 package edu.tucn.lab7.ex3;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
