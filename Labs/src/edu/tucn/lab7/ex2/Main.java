@@ -19,6 +19,7 @@ public class Main {
                     ++count;
             }
             System.out.println("The character '"+input+"' appears "+count+" times");
+            file.close();
         } catch (IOException e){
             System.out.println(e.getMessage());
         }

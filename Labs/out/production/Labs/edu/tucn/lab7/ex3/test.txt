@@ -1,0 +1,12 @@
+Exercises
+Exercise 1
+Modify cofee maker example so that CofeeMaker will throw an exception if a predefined number of cofee objects are created .
+
+Exercise 2
+Write a program that counts the number of times a particular character, such as e, appears in a file. The character can be specified at the command line. Use data.txt as the input file.
+
+Exercisie 3
+Write a program that encrypt and decrypt text files using a very simple algorithm (each character ascii code is shifted left with 1). Encrypted file extension will be '.enc'. The application will receive the operation (encript\decript) and the file on which the operation must be applied as arguments from command line. Decrypted files will be stored having the same name as encripted file but with '.dec' extension.
+
+Exercisie 4
+Considering a class Car with attributes model and price. Write a program which allow user to create car objects, save car objects on a local folder , view existing car objects on the local folder, read a car object from local folder and display it's details. Use serialization mechanism for storing and retrieval of objects.
