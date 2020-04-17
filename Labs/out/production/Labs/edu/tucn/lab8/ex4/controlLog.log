@@ -1,0 +1,60 @@
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit <init>
+INFO: Control Unit initialized
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Reading #1
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #1: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #2: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #3: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Temperature sensor: 10 degrees
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Heating system started
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Reading #2
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+WARNING: Fire Sensor #1: detected fire 
+Alarm started... 
+Calling the owner...
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #2: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #3: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Reading #3
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #1: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #2: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #3: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Temperature sensor: 19 degrees
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Heating system started
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Reading #4
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #1: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #2: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #3: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Temperature sensor: 4 degrees
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Heating system started
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Reading #5
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #1: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #2: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Fire Sensor #3: no fire
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Temperature sensor: 33 degrees
+Apr 17, 2020 6:46:51 PM edu.tucn.lab8.ex4.ControlUnit start
+INFO: Cooling system started
