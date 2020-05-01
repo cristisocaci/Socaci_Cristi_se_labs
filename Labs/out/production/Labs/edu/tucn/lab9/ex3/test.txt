@@ -1,0 +1,14 @@
+Exercises
+Exercise 1
+Test applications for section Interfete grafice
+Exercise 2
+Create an application which displays in a text field a counter which is incremented each time a button is pressed.
+
+Exercise 3
+Create an application which let a user enter a file name in a text field and then when a button is pressed to display the content of the file in a text area.
+
+Exercise 4
+Create an application which let to users to play X&0 game.
+
+Exercise 5
+Add to Railway Traffic Simulator application from Exercise 3 an user interface which to display segments in each station (as a text field) and the content of the segment (if a train is parked on a segment it's id is displayed on the segment text field). The user interface should also provide user a method to add a train in a station by specifying destination station and the segment on the current station where the train to be placed.
