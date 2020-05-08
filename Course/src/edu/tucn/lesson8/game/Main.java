@@ -15,7 +15,7 @@ public class Main {
         character.setSize(Utils.CHARACTER_SIZE, Utils.CHARACTER_SIZE);
 
         List<Enemy> enemies = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             Enemy enemy = new Enemy();
             enemy.setSize(Utils.CHARACTER_SIZE, Utils.CHARACTER_SIZE);
             enemies.add(enemy);

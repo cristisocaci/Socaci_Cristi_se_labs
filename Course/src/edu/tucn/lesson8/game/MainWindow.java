@@ -30,7 +30,7 @@ public class MainWindow extends JFrame {
         this.score = score;
 
         JLabel scoreLabel = new JLabel("Score: " + this.score[0]);
-        scoreLabel.setBounds(20, 20, 50, 10);
+        scoreLabel.setBounds(20, 20, 100, 10);
         scoreLabel.setVisible(true);
         this.add(scoreLabel);
         this.addKeyListener(new KeyListener() {

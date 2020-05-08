@@ -28,7 +28,7 @@ public class Controller {
 
     public int start() {
 
-        int speed = 5;
+        int speed = 10;
         calcSpeeds(speed);
         while (!collision) {
             Iterator<Integer> iter = speeds.iterator();
@@ -44,7 +44,7 @@ public class Controller {
                     if (e.getY() > Utils.WIN_SIZE) {
                         e.setLocation(r.nextInt(Utils.WIN_SIZE - 20), 0);
                         if (++score[0] % 5 == 0) {
-                            calcSpeeds(speed + (int) (score[0] / 2.5));
+                            calcSpeeds(speed + (int) (score[0] / 10));
                             throw new RuntimeException();
                         }
                     }
@@ -67,6 +67,6 @@ public class Controller {
 
         speeds.clear();
         for (int i = 0; i < enemies.size(); ++i)
-            speeds.add(Math.abs((int) (mean + 2 * r.nextGaussian())));
+            speeds.add(Math.abs((int) (mean + 4 * r.nextGaussian())));
     }
 }
