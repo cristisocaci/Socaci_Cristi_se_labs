@@ -20,8 +20,9 @@ public class Main {
             enemy.setSize(Utils.CHARACTER_SIZE, Utils.CHARACTER_SIZE);
             enemies.add(enemy);
         }
-
-        MainWindow window = new MainWindow(character, enemies);
+        Integer[] score = new Integer[1];
+        score[0] = 0;
+        MainWindow window = new MainWindow(character, enemies, score);
         //JLabel youlose= new JLabel(new ImageIcon("src\\edu\\tucn\\lesson8\\game\\youlose.jpg"));
         JPanel youlose = new JPanel();
         youlose.setBackground(Color.BLACK);
@@ -36,9 +37,7 @@ public class Main {
         youlose.add(text);
         window.add(youlose);
 
-        int score = new Controller(enemies, character).start();
-
-        text.setText(text.getText() + "\n      " + score);
+        text.setText(text.getText() + "\n          " + new Controller(enemies, character, score).start());
         window.setInvisible();
         youlose.setVisible(true);
 

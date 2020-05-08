@@ -18,37 +18,38 @@ public class Controller {
     private boolean collision;
     ArrayList<Integer> speeds = new ArrayList<Integer>();
     Random r = new Random();
-    public Controller(List<Enemy> enemies, Character mycharacter) {
+    private Integer[] score;
+
+    public Controller(List<Enemy> enemies, Character mycharacter, Integer[] score) {
         this.enemies = enemies;
         this.mycharacter = mycharacter;
+        this.score = score;
     }
 
     public int start() {
 
         int speed = 5;
         calcSpeeds(speed);
-        Holder<Integer> count = new Holder<>(1);
         while (!collision) {
             Iterator<Integer> iter = speeds.iterator();
             try {
                 enemies.forEach(e -> {
                     e.setLocation(e.getX(), (int) (e.getY() + iter.next()));
-                    if(Math.abs(e.getX() - mycharacter.getX()) < Utils.CHARACTER_SIZE){
-                        if(Math.abs(e.getY() - mycharacter.getY()) < Utils.CHARACTER_SIZE){
+                    if (Math.abs(e.getX() - mycharacter.getX()) < Utils.CHARACTER_SIZE) {
+                        if (Math.abs(e.getY() - mycharacter.getY()) < Utils.CHARACTER_SIZE) {
                             collision = true;
                             throw new RuntimeException();
                         }
+                    }
                     if (e.getY() > Utils.WIN_SIZE) {
                         e.setLocation(r.nextInt(Utils.WIN_SIZE - 20), 0);
-                        }
-                        if (++count.value % 5 == 0) {
-                            calcSpeeds(speed + count.value);
+                        if (++score[0] % 5 == 0) {
+                            calcSpeeds(speed + (int) (score[0] / 2.5));
                             throw new RuntimeException();
                         }
                     }
                 });
-            }
-            catch(RuntimeException ignored){
+            } catch (RuntimeException ignored) {
             }
 
 
@@ -58,13 +59,14 @@ public class Controller {
             }
         }
 
-        return count.value - 1;
+        return score[0];
 
     }
-    private void calcSpeeds(int mean){
+
+    private void calcSpeeds(int mean) {
 
         speeds.clear();
         for (int i = 0; i < enemies.size(); ++i)
-            speeds.add(Math.abs((int) (mean + 4 * r.nextGaussian())));
+            speeds.add(Math.abs((int) (mean + 2 * r.nextGaussian())));
     }
 }
