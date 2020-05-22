@@ -16,21 +16,23 @@ public class TimerThread extends Thread {
     @Override
     public void run() {
         synchronized (monitor) {
-            try {
-                monitor.wait();
-            } catch (InterruptedException e) {
+            while (true){
+                try {
+                    monitor.wait();
+                } catch (InterruptedException e) {
+                }
+                win.updateTimer("Counting...");
+                long t1 = System.currentTimeMillis();
+
+                try {
+                    monitor.wait();
+                } catch (InterruptedException e) {
+                }
+
+                long t2 = System.currentTimeMillis();
+
+                win.updateTimer(""+(t2 - t1));
             }
-
-            long t1 = System.currentTimeMillis();
-
-            try {
-                monitor.wait();
-            } catch (InterruptedException e) {
-            }
-
-            long t2 = System.currentTimeMillis();
-
-            win.updateTimer(t2 - t1);
         }
 
     }
