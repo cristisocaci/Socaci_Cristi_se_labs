@@ -6,7 +6,7 @@ public class Display extends JFrame {
     JLabel value;
     public Display(){
         super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        super.setBounds(500, 500, 250, 100);
+        super.setBounds(500, 500, 350, 100);
         super.setLayout(null);
         JLabel text = new JLabel("Temperature: ");
         text.setBounds(10, 10, 100, 20);
